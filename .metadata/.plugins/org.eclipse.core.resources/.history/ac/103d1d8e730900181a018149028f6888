@@ -1,0 +1,10 @@
+package SeleniumSessions;
+
+public class MmouseMovementClass {
+
+	public static void main(String[] args) {
+		//mouse movement is done by action class
+
+	}
+
+}

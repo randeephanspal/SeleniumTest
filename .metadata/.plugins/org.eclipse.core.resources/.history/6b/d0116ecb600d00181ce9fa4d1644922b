@@ -1,0 +1,62 @@
+package com.test;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+
+public class TestNgBasics {
+
+	//pre conditions annotatations --  starts with @Before
+	
+	@BeforeSuite 
+	public void setUp(){
+		System.out.println("setup system property fromm chrome");	
+	}
+	
+	@BeforeTest
+	public void launchBrowser(){
+		System.out.println("launchBrowser");
+	}
+	
+	@BeforeClass
+	public void login(){
+		System.out.println("login to app");
+	}
+	
+	@BeforeMethod
+	public void enterURL(){
+		System.out.println("Enter url");
+	}
+	
+//Testcases -- starting with @Test
+	@Test
+	public void googleTitleTest(){
+		System.out.println("Google Title test");
+	}
+	
+	@Test
+	public void searchTest(){
+		System.out.println("search Test");
+	}
+	
+	//post condition -- starting with @After
+	@AfterMethod
+	public void logout(){
+		System.out.println("Logout from app");
+	}
+	
+	@AfterClass
+	public void closeBrowser(){
+		System.out.println("Close Browser");
+	}
+	
+	@AfterTest
+	public void deleteAllCookies(){
+		System.out.println("delete cookies");
+	}
+	
+
+	
+	
+}

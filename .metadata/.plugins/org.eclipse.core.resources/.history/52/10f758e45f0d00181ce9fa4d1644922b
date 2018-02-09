@@ -1,0 +1,33 @@
+package com.test;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+
+public class TestNgBasics {
+
+	//pre conditions annotatations --  starts with @Before
+	
+	@BeforeSuite 
+	public void setUp(){
+		System.out.println("setup system property fromm chrome");	
+	}
+	
+	@BeforeTest
+	public void launchBrowser(){
+		System.out.println("launchBrowser");
+	}
+	
+	@BeforeClass
+	public void login(){
+		System.out.println("login to app");
+	}
+	
+	@BeforeMethod
+	public void enterURL(){
+		System.out.println("Enter url");
+	}
+	
+
+	
+}

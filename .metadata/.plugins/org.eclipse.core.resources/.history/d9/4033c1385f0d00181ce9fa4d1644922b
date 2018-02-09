@@ -1,0 +1,21 @@
+package com.test;
+
+import org.testng.annotations.BeforeClass;
+
+public class TestNgBasics {
+
+	//pre conditions annotatations --  starts with @Before
+	
+	@BeforeSuite 
+	public void setUp(){
+		System.out.println("setup system property fromm chrome");	
+	}
+	
+	@BeforeClass
+	public void launchBrowser(){
+		System.out.println("launchBrowser");
+	}
+	
+
+	
+}

@@ -1,0 +1,16 @@
+<test name="Different testng Feature Test">
+
+<classes>
+
+	<class name="com.test.ExceptionTimeOut"/>
+	<class name="com.test.GoogleTest"/>
+	<class name="com.test.GoogleTitleTest"/>
+	<class name="com.test.invocationCountTest"/>
+	<class name="com.test.TestNgBasics"/>
+	<class name="com.test.TestNgFeatures"/>
+
+</classes>
+
+</test>
+
+</suite>

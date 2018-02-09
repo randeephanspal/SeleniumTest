@@ -1,0 +1,75 @@
+package JavaBasics;
+
+public class ArrayConcept {
+
+	public static void main(String[] args) {
+		
+		//array: to store similar data type values in array variable.
+		// one dim array
+		// disadv of array: 
+		// 1. size is fixed(also called as static array) -- to overcome this pblm, we use collections like ArrayList,HashTable. (called as Dynamic array)
+		// 2. store similar datatypes -- to overcome this pblm, we use Object array.
+		
+		//1. int array
+		//lowest bound/index = 0
+		//upper bound/index = (n-1), n is size of array.
+		
+		int i[] = new int[3];
+		i[0] = 10;
+		i[1] = 20;
+		i[2] = 30;
+		
+		System.out.println(i[2]);
+		
+		//System.out.println(i[5]);   //IntvQ: ArrayIndexOutofBoundException
+		
+		System.out.println(i.length);  //size/length of array
+		
+		//print all the values of array
+		for(int j=0; j<i.length; j++){
+			System.out.println(i[j]);
+		}
+		
+		System.out.println("*******************");
+		//2. double array
+		double d[] = new double[3];
+		d[0] = 12.33;
+		d[1] = 13.44;
+		d[2] = 14;
+		System.out.println(d[2]);
+		
+		System.out.println("*******************");
+		
+		//3. char array
+		char c[] = new char[3];
+		c[0] = 'S';
+		c[1] = 'A';
+		c[2] = 'M';
+		System.out.println(c[2]);
+		
+		
+		//4. boolean array
+		boolean bo[] = new boolean[2];
+		bo[0] = true;
+		bo[1] = false;
+		System.out.println(bo[1]);
+		 	
+		//5. String array
+		String s1[] = new String[2];
+		s1[0] = "Hello Moto";
+		s1[1] = "Bye";
+		System.out.println(s1.length);
+		
+
+		// 6. Object Array (Object is a class)
+		Object ob[] = new Object[3];
+		ob[0] = "Tom";
+		ob[1] = 26;
+		ob[2] = "01/01/1990";
+		System.out.println(ob.length);
+		System.out.println(ob[2]);
+				
+		
+	}
+
+}

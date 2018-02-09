@@ -1,0 +1,20 @@
+#name = Tom
+#age =25
+
+URL = https://reg.ebay.com/reg/PartialReg?ru=https%3A%2F%2Fwww.ebay.com%2F
+
+
+###### Register page - Test Data #######
+Firstname = Tom
+Lastname = Moody
+Email = r@gmail.com
+
+###### Register page - Object Repository #######
+firstname_xpath = //*[@id="firstname"]
+lastname_xpath = //*[@id="lastname"]
+email_xpath = //*[@id="email"]
+
+
+
+browser = chrome
+

@@ -1,0 +1,17 @@
+package OOPConceptPart2;
+
+public class ConstructorConcept {
+	
+	public ConstructorConcept(){
+		System.out.println("Print default const");
+	}
+	
+
+	public static void main(String[] args) {
+
+		ConstructorConcept consobj = new ConstructorConcept();
+		
+		
+	}
+
+}

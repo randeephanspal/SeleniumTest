@@ -1,0 +1,22 @@
+package OOPConceptPart2;
+
+public class ConstructorWithThisKeyword {
+	
+	//class var or global var
+	int age;  
+	String name;
+
+	public ConstructorWithThisKeyword(int age, String name){  //age and name are local var
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+
+		ConstructorWithThisKeyword conob = new ConstructorWithThisKeyword(10, "Tom");
+		
+		
+	}
+
+}

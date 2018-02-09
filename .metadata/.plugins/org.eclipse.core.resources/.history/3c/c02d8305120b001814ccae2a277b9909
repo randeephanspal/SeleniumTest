@@ -1,0 +1,20 @@
+package test;
+
+public class CallBy {
+
+	public static void main(String[] args) {
+
+
+		CallBy cobj = new CallBy();
+		System.out.println(cobj.sum(20,40));
+		
+		
+	}
+
+	
+	public int sum(int a, int b){
+		int t = a+b;
+		return t;
+	}
+	
+}

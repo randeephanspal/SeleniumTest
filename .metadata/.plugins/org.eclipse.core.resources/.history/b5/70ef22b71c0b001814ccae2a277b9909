@@ -1,0 +1,9 @@
+package OOPConceptPart2;
+
+public class SuperA {
+	
+	public SuperA(){
+		System.out.println("Parent class superA");
+	}
+	
+}

@@ -1,0 +1,16 @@
+package OOPConceptPart2;
+
+public class SuperB extends SuperA{
+
+	public SuperB(){
+		System.out.println("In SuperB child class");
+	}
+	
+	
+	public static void main(String[] args) {
+
+		SuperB sb = new SuperB();
+		
+	}
+
+}

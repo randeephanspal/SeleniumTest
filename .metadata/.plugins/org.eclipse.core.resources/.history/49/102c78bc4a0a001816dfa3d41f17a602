@@ -1,0 +1,23 @@
+package SeleniumSessions;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
+
+public class ReadPropFile {
+
+	public static void main(String[] args) throws FileNotFoundException {
+
+		Properties prop = new Properties();
+		
+		FileInputStream ip = new FileInputStream("C:\\Users\\test\\workspace\\Selenium\\src\\SeleniumSessions\\config.properties");
+		
+		prop.load(ip);
+		
+		System.out.println(prop.getProperty("name"));
+		
+		
+		
+	}
+
+}
