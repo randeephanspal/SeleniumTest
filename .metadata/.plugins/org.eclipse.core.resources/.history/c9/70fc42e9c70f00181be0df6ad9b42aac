@@ -1,0 +1,22 @@
+package com.test;
+
+import org.testng.Assert;
+
+public class SoftAndHardAssert {
+	
+	@Test
+	public void test1(){
+		
+		System.out.println("Open Browser");
+		Assert.assertEquals(true, false);
+		System.out.println("enter Username");
+		System.out.println("enter password");
+		System.out.println("click or sign");
+		System.out.println("validate HomePage");
+		
+	}
+	
+	
+	
+
+}

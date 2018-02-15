@@ -1,0 +1,21 @@
+package InterviewQs;
+
+public class SwapStrings {
+
+	//swap string without using third variable
+	
+	public static void main(String[] args) {
+
+
+		String a = "Hello";
+		String b = "World";
+		
+		a = a+b; //HelloWorld
+		b = a.substring(0, a.length()-b.length()); //Hello
+		System.out.println(b);
+		a = a.substring(b.length());
+		System.out.println(a);
+		
+	}
+
+}

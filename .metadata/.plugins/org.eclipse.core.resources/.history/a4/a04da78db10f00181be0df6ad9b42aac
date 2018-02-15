@@ -1,0 +1,28 @@
+package test;
+
+public class Finaltest {
+
+	public static void main(String[] args) {
+
+		test();
+		
+	}
+
+	public static void test(){
+		int i=10;
+		try{
+			System.out.println("inside try block");
+			int k = i/0;
+			System.out.println("after error --inside try block");
+		}
+		catch(ArithmeticException e){
+		System.out.println("divide by zero error");
+		}
+		finally{
+			System.out.println("Fianllly will always execute");
+		}
+		
+	}
+	
+	
+}

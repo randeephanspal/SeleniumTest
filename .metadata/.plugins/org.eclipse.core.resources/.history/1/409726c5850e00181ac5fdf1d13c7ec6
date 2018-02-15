@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Yahoo App Test Automation Suite"
+
+	<test name="Yahoo App Test">
+	
+	<parameter name="url" value="https://login.yahoo.com/m?.intl=in&.lang=en-IN"/>
+	<parameter name="email" value="test@yahoo.com"/>
+
+		<classes>
+			<class name="ParameterTest"/>
+		</classes>
+
+	</test>
+ 
+</suite>

@@ -1,0 +1,58 @@
+package com.datadriven.test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class DataDrivenTest {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver(); //launch chrome
+		driver.manage().window().maximize(); //maximize window
+		driver.manage().deleteAllCookies(); //delete cookies
+		
+		driver.get("https://reg.ebay.in/reg/PartialReg");  //enter url
+		
+		
+		//get test data from excel
+		Xls_Reader reader = new Xls_Reader("C:\\Users\\test\\workspace\\Selenium\\src\\com\\datadriven\\test\\EbayTestData.xlsx");
+		int rowCount = reader.getRowCount("RegistrationTestData");
+		
+		//Parameterization
+		for(int rowNum=2; rowNum<=rowCount; rowNum++){
+			String firstname = reader.getCellData("RegistrationTestData", "firstname", rowNum);
+			System.out.println(firstname);
+			
+			String lastname = reader.getCellData("RegistrationTestData", "lastname", rowNum);
+			System.out.println(lastname);
+			
+			String email = reader.getCellData("RegistrationTestData", "email", rowNum);
+			System.out.println(email);
+			
+			String password = reader.getCellData("RegistrationTestData", "password", rowNum);
+			System.out.println(password);
+			
+			
+			//enterdata
+			driver.findElement(By.xpath("//*[@id='firstname']")).clear();
+			driver.findElement(By.xpath("//*[@id='firstname']")).sendKeys(firstname);
+			
+			driver.findElement(By.xpath("//*[@id='lastname']")).clear();
+			driver.findElement(By.xpath("//*[@id='lastname']")).sendKeys(lastname);
+			
+			driver.findElement(By.xpath("//*[@id='email']")).clear();
+			driver.findElement(By.xpath("//*[@id='email']")).sendKeys(email);
+			
+			driver.findElement(By.xpath("//*[@id='PASSWORD']")).clear();
+			driver.findElement(By.xpath("//*[@id='PASSWORD']")).sendKeys(password);
+			
+		}
+		
+		
+		
+		
+	}
+
+}

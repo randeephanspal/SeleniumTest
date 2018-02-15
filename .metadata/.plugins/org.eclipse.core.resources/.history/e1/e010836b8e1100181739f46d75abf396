@@ -1,0 +1,25 @@
+package CollectionsSession;
+
+import java.util.Hashtable;
+
+public class HashTableConcept {
+
+	public static void main(String[] args) {
+
+		Hashtable h = new Hashtable();
+		
+		h.put("A", "Tom");
+		h.put("B", "Moddy");
+		System.out.println(h.size());
+		
+		
+		h.put(1, 100);
+		h.put(2, 200);
+		System.out.println(h.size());
+
+		System.out.println(h.get("B"));
+		System.out.println(h.get(2));
+		
+	}
+
+}

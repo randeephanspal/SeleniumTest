@@ -4,6 +4,7 @@ package OOPConceptPart1;
 public class LocalVsGlobalVariable {
 
 	//Global variable -- class var
+	//scope of GV is throughout the pgm and to call the GV u need to do it via obj ref var
 	String name = "Tom";
 	int age = 25;
 	

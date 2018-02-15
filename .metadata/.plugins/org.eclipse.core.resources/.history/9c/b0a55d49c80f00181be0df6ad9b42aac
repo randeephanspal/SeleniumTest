@@ -1,0 +1,25 @@
+package com.test;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class SoftAndHardAssert {
+	
+	@Test
+	public void test1(){
+		
+		//hard Assertion: If HA fails then next line will not execute
+		
+		System.out.println("Open Browser");
+		Assert.assertEquals(true, false);  //hard Assertion
+		System.out.println("enter Username");
+		System.out.println("enter password");
+		System.out.println("click or sign");
+		System.out.println("validate HomePage");
+		
+	}
+	
+	
+	
+
+}

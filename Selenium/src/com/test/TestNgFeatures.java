@@ -4,10 +4,10 @@ import org.testng.annotations.Test;
 
 public class TestNgFeatures {
 	
-	@Test
+	@Test()
 	public void loginTest(){
 		System.out.println("Login test");
-		int i = 9/0; 
+		//int i = 9/0; 
 	}
 	
 	@Test(dependsOnMethods="loginTest")

@@ -1,0 +1,61 @@
+package com.qa.test;
+
+import java.util.concurrent.TimeUnit;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class LoginLogsTest {
+	
+	//How to generate logs: using apache log4j API (log4j api)
+	//how it works? it reads log 4j configuration from log4j.properties file.
+	//where to create: create inside resources folder
+	
+	WebDriver driver;	
+	Logger log = Logger.getLogger(LoginLogsTest.class);
+	
+	@BeforeMethod
+	public void setUp(){
+		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver(); 
+		driver.manage().window().maximize(); 
+		driver.manage().deleteAllCookies(); 
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS); 
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
+		log.info("********** URL to be enterred **************")
+		driver.get("http://freecrm.com/");	
+		log.warn("Just a warning message----");
+		log.fatal("Print error message****************");
+		
+	}
+	
+	@Test(priority=1)
+	public void freeCrmTitleTest(){
+		String title = driver.getTitle();
+		System.out.println(title);
+		
+		Assert.assertEquals(title, "#1 Free CRM for Any Business: Online Customer Relationship Software", "Title doesnt match");  //validation
+	}
+	
+	
+	@Test(priority=2)
+	public void freeCrmLogoTest(){
+		boolean b = driver.findElement(By.className("img-responsive")).isDisplayed();
+		System.out.println(b);
+		
+		Assert.assertTrue(true);
+		Assert.assertEquals(b,true);
+	}
+	
+	@AfterMethod
+	public void tearDown(){
+		driver.quit();
+	}
+
+}

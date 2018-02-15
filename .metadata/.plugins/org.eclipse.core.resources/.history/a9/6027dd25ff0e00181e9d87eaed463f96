@@ -1,0 +1,41 @@
+package com.test.utility;
+
+import java.util.ArrayList;
+
+import com.datadriven.test.Xls_Reader;
+
+public class TestUtil {
+	
+	static Xls_Reader reader;
+	
+	public static ArrayList<Object[]> getDataFromExcel(){
+		
+		ArrayList<Object[]> myData = new ArrayList<Object[]>();
+		try{
+			reader = new Xls_Reader("C:\\Users\\test\\workspace\\Selenium\\src\\com\\datadriven\\test\\EbayTestData.xlsx");
+		}catch (Exception e){
+			e.printStackTrace();
+			}
+		
+		for(int rowNum=2; rowNum<=reader.getRowCount("RegistrationTestData"); rowNum++){
+			String firstname = reader.getCellData("RegistrationTestData", "firstname", rowNum);
+			System.out.println(firstname);
+			
+			String lastname = reader.getCellData("RegistrationTestData", "lastname", rowNum);
+			System.out.println(lastname);
+			
+			String email = reader.getCellData("RegistrationTestData", "email", rowNum);
+			System.out.println(email);
+			
+			String password = reader.getCellData("RegistrationTestData", "password", rowNum);
+			System.out.println(password);
+			
+			Object ob[] = {firstname, lastname, email, password};
+			myData.add(ob);
+		
+		
+		
+	}
+	
+
+}

@@ -1,0 +1,23 @@
+package com.test.utility;
+
+import java.util.ArrayList;
+
+import com.datadriven.test.Xls_Reader;
+
+public class TestUtil {
+	
+	static Xls_Reader reader;
+	
+	public static ArrayList<Object[]> getDataFromExcel(){
+		
+		ArrayList<Object[]> myData = new ArrayList<Object[]>();
+		
+		
+		
+		
+		
+		
+	}
+	
+
+}

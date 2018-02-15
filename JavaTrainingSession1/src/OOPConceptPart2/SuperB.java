@@ -8,7 +8,7 @@ package OOPConceptPart2;
 public class SuperB extends SuperA{
 
 	public SuperB(){
-		super(10);
+		//super(10);
 		System.out.println("In SuperB child class");
 	}
 	

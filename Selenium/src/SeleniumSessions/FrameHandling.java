@@ -35,6 +35,7 @@ public class FrameHandling {
 		//exception: when frame not mentioned:
 	//NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'Contacts')]"}
 		driver.findElement(By.xpath("//a[contains(text(),'Contacts')]")).click();
+		System.out.println("Get Title after click contacts::::" + driver.getTitle());
 	}
 
 }

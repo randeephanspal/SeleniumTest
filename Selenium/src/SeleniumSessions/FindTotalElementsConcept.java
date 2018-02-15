@@ -28,7 +28,7 @@ public class FindTotalElementsConcept {
 		//1. get total count of links on the page
 		//2. get text of each link on the page
 		
-		List <WebElement> links = driver.findElements(By.tagName("a"));
+		List <WebElement> links = driver.findElements(By.tagName("a")); //input,button
 		
 		System.out.println(links.size());
 		

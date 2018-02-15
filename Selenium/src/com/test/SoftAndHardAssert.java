@@ -1,0 +1,51 @@
+package com.test;
+
+import static org.testng.Assert.assertEquals;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+public class SoftAndHardAssert {
+	
+	//SoftAssert softassert = new SoftAssert();
+	
+	
+	@Test
+	public void test1(){
+		SoftAssert softassert1 = new SoftAssert();
+		
+		//hard Assertion: If HA fails then next line will not execute and tc will terminate
+		//soft assertion: soft validn -- if SA fails then tc will be marked as fail and will execute all the lines.
+		//assertAll(): to mark the tc as failed is any SA is getting failed. 
+		
+		
+		System.out.println("Open Browser");
+		Assert.assertEquals(true, true);  //hard Assertion
+		System.out.println("enter Username");
+		System.out.println("enter password");
+		System.out.println("click or sign");
+		System.out.println("validate HomePage");
+		softassert1.assertEquals(true, false, "home page title is missing");
+		
+		System.out.println("go to deals page");
+		System.out.println("create a deal");
+		softassert1.assertEquals(true, false, "not able to create a deal");
+		System.out.println("create a contact");
+		
+		softassert1.assertAll();
+		
+	}
+	
+	@Test
+	public void test2(){
+		SoftAssert softassert2 = new SoftAssert();
+		
+		System.out.println("logout");
+		softassert2.assertEquals(true, false, "logout filed");
+		softassert2.assertAll();
+	}
+	
+	
+
+}

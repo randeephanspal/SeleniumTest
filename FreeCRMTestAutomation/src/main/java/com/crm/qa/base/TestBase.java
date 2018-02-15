@@ -1,0 +1,22 @@
+package com.crm.qa.base;
+
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+
+public class TestBase {
+
+	static WebDriver driver;
+	static Properties prop;
+	
+	public TestBase(){
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+}

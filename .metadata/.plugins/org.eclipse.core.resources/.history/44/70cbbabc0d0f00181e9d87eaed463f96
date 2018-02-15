@@ -1,0 +1,22 @@
+package test;
+
+public class Finaltest {
+
+	public static void main(String[] args) {
+
+		test();
+		
+	}
+
+	public static void test(){
+		int i=10;
+		try{
+			int k = 1/0;
+			System.out.println("inside try block");
+		}
+		
+		
+	}
+	
+	
+}
