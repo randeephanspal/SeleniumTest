@@ -2,11 +2,13 @@ package test;
 
 import java.util.ArrayList;
 
-public class ArrayList {
+public class ArrayList1 {
 
 	public static void main(String[] args) {
 
-		ArrayList<Integer> ar = new ArrayList<Integer>();
+		ArrayList<Integer> ar = new ArrayList();
+
+//		ArrayList<Integer> ar = new ArrayList<Integer>();
 		
 		ar.add(10);//0
 		ar.add(20);//1
@@ -18,4 +20,3 @@ public class ArrayList {
 	}
 }
 
-}
