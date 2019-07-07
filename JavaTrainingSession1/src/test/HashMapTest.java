@@ -8,7 +8,7 @@ class HashMapTest {
         HashMap<Integer,String> hm =new HashMap<>();
         System.out.println("Size of HashMap:" + hm.size());
         hm.put(1,"Raj");
-        hm.put(2,"Malt");
+        hm.put(2,"Ram");
         System.out.println("Size of hashMap after addition: "+hm.size());
 
     }
