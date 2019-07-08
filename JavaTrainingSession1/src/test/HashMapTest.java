@@ -9,6 +9,7 @@ class HashMapTest {
         System.out.println("Size of HashMap:" + hm.size());
         hm.put(1,"Raj");
         hm.put(2,"Ram");
+        hm.put(2,"Ravi");
         System.out.println("Size of hashMap after addition: "+hm.size());
 
     }
